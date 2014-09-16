@@ -1,12 +1,12 @@
 Raspberry Pi Good Morning SMS
 =============================
 
-An automated SMS sent every morning with Bitcoin prices, weather forecast, clothing recommendations, and more
+An automated SMS sent every morning with Bitcoin prices, weather forecast, clothing recommendations, and more.
 
 Overview
 -----------------------------
 
-The Raspberry Pi Good Morning SMS uses Python and various REST APIs to obtain Bitcoin prices, weather information, make clothing reccomendations, and then text me all of the information 7:00 each morning before I start my day.
+Raspberry Pi Good Morning SMS uses Python and various REST APIs to obtain Bitcoin prices, weather information, make clothing reccomendations, and then text me all of the information 7:00 each morning before I start my day.
 
 Requirements
 -----------------------------
