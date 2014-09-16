@@ -6,9 +6,6 @@ from twilio.rest import TwilioRestClient
 account_sid = "YOUR TWILIO SID"
 auth_token = "YOUR TWILIO AUTH TOKEN"
 client = TwilioRestClient(account_sid, auth_token)
- 
-wurl = 'http://xml.weather.yahoo.com/forecastrss?p=%s' # weather rss
-wser = 'http://xml.weather.yahoo.com/ns/rss/1.0'
 
 def bitcoin_price():
     coinbaseURL = 'https://coinbase.com/api/v1/prices/sell'
@@ -17,6 +14,8 @@ def bitcoin_price():
     return "Good morning, Chase. The current Bitcoin price is $" + data["amount"] + "."
 
 def weather_for_zip(zip_code):
+    wurl = 'http://xml.weather.yahoo.com/forecastrss?p=%s'
+    wser = 'http://xml.weather.yahoo.com/ns/rss/1.0'
     url = wurl % zip_code +'&u=f'
     dom = minidom.parse(urllib.urlopen(url))
     forecasts = []
@@ -34,12 +33,12 @@ TO = 'YOUR PHONE NUMBER'
 FROM = 'YOUR TWILIO NUMBER'
  
 a = weather_for_zip(ZIP)
-hight = a['forecasts'][0]['high'] # Defines hight as the high temperature
-temp = int(hight)
+highTemp = a['forecasts'][0]['high']
+temp = int(highTemp)
 message1Body = ''
 message2Body = ''
 
-if temp < 65: # The sixty and the other numbers can be changed to user's preferences.
+if temp < 65:
     message1Body = "I recommend wearing something slightly warm... It is only " + str(temp) + " degrees!"
     message2Body = "May I suggest a hoodie?"
 elif temp >= 65 and temp < 85:
