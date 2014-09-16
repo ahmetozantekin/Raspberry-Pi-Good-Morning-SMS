@@ -3,6 +3,8 @@ Raspberry Pi Good Morning SMS
 
 An automated SMS sent every morning with Bitcoin prices, weather forecast, clothing recommendations, and more.
 
+<img src="http://chaseacton.com/cdn/SMS.png" width=400px>
+
 Overview
 -----------------------------
 
